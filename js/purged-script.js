@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -31,7 +31,7 @@ function initNavigation() {
             }
         });
     });
-    
+
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -48,7 +48,7 @@ function initScrollEffects() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -56,7 +56,7 @@ function initScrollEffects() {
             }
         });
     }, observerOptions);
-    
+
     // Observe elements for animation
     const animatedElements = document.querySelectorAll('.fade-in, .service-card, .about, .contact');
     animatedElements.forEach(el => observer.observe(el));
@@ -66,23 +66,23 @@ function initScrollEffects() {
 function initContactForm() {
     const contactForm = document.querySelector('#contact-form');
     if (!contactForm) return;
-    
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         const formData = new FormData(this);
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        
+
         // Show loading state
         submitBtn.textContent = 'جاري الإرسال...';
         submitBtn.disabled = true;
-        
+
         // Simulate form submission (replace with actual API call)
         setTimeout(() => {
             // Show success message
             showNotification('تم إرسال الرسالة بنجاح!', 'success');
-            
+
             // Reset form
             this.reset();
             submitBtn.textContent = originalText;
@@ -96,7 +96,7 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Style the notification
     Object.assign(notification.style, {
         position: 'fixed',
@@ -110,7 +110,7 @@ function showNotification(message, type = 'info') {
         transform: 'translateX(100%)',
         transition: 'transform 0.3s ease'
     });
-    
+
     // Set background color based on type
     const colors = {
         success: '#28a745',
@@ -119,14 +119,14 @@ function showNotification(message, type = 'info') {
         info: '#17a2b8'
     };
     notification.style.backgroundColor = colors[type] || colors.info;
-    
+
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
+
     // Remove after 5 seconds
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
@@ -145,7 +145,7 @@ function initAnimations() {
         const duration = 2000; // 2 seconds
         const increment = target / (duration / 16); // 60fps
         let current = 0;
-        
+
         const updateCounter = () => {
             if (current < target) {
                 current += increment;
@@ -155,7 +155,7 @@ function initAnimations() {
                 counter.textContent = target;
             }
         };
-        
+
         // Start animation when element is visible
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
@@ -165,7 +165,7 @@ function initAnimations() {
                 }
             });
         });
-        
+
         observer.observe(counter);
     });
 }
@@ -200,13 +200,13 @@ function throttle(func, limit) {
 const optimizedScrollHandler = throttle(function() {
     // Handle scroll events efficiently
     const scrollY = window.scrollY;
-    
+
     // Update navbar
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         navbar.classList.toggle('scrolled', scrollY > 100);
     }
-    
+
     // Update progress bar if exists
     const progressBar = document.querySelector('.scroll-progress');
     if (progressBar) {
@@ -221,7 +221,7 @@ window.addEventListener('scroll', optimizedScrollHandler);
 // Lazy loading for images
 function initLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -232,7 +232,7 @@ function initLazyLoading() {
             }
         });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
 }
 

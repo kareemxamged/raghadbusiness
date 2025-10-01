@@ -7,22 +7,26 @@ class TaskScheduler {
         this.tasks = [];
         this.isRunning = false;
     }
-    
+
     addTask(task, priority = 'normal') {
-        this.tasks.push({ task, priority, timestamp: Date.now() });
+        this.tasks.push({
+            task,
+            priority,
+            timestamp: Date.now()
+        });
         this.schedule();
     }
-    
+
     schedule() {
         if (this.isRunning) return;
         this.isRunning = true;
         this.processTasks();
     }
-    
+
     async processTasks() {
         const startTime = performance.now();
         const maxExecutionTime = 5; // 5ms max per frame
-        
+
         while (this.tasks.length > 0 && (performance.now() - startTime) < maxExecutionTime) {
             const task = this.tasks.shift();
             try {
@@ -31,7 +35,7 @@ class TaskScheduler {
                 console.error('Task execution error:', error);
             }
         }
-        
+
         if (this.tasks.length > 0) {
             // Use requestIdleCallback if available, otherwise setTimeout
             if (window.requestIdleCallback) {
@@ -70,27 +74,28 @@ function addOptimizedEventListener(element, event, handler, options = {}) {
         passive: true,
         ...options
     };
-    
+
     element.addEventListener(event, handler, optimizedOptions);
 }
 
 // Optimized scroll handler
 let scrollTimeout;
+
 function optimizedScrollHandler() {
     if (scrollTimeout) {
         cancelAnimationFrame(scrollTimeout);
     }
-    
+
     scrollTimeout = requestAnimationFrame(() => {
         // Handle scroll-related updates
         const scrollY = window.scrollY;
-        
+
         // Update navbar
         const navbar = document.querySelector('.navbar');
         if (navbar) {
             navbar.classList.toggle('scrolled', scrollY > 100);
         }
-        
+
         // Update progress bar
         const progressBar = document.querySelector('.scroll-progress');
         if (progressBar) {
@@ -103,21 +108,22 @@ function optimizedScrollHandler() {
 
 // Optimized resize handler
 let resizeTimeout;
+
 function optimizedResizeHandler() {
     if (resizeTimeout) {
         clearTimeout(resizeTimeout);
     }
-    
+
     resizeTimeout = setTimeout(() => {
         // Handle resize-related updates
         const viewportWidth = window.innerWidth;
-        
+
         // Update mobile menu visibility
         const mobileMenu = document.querySelector('.mobile-menu');
         if (mobileMenu && viewportWidth > 768) {
             mobileMenu.classList.remove('active');
         }
-        
+
         // Update responsive images
         const responsiveImages = document.querySelectorAll('img[data-src]');
         responsiveImages.forEach(img => {
@@ -132,14 +138,14 @@ function optimizedResizeHandler() {
 // Optimized animation frame handler
 function optimizedAnimationFrame(callback) {
     let animationId;
-    
+
     function animate() {
         callback();
         animationId = requestAnimationFrame(animate);
     }
-    
+
     animate();
-    
+
     return () => {
         if (animationId) {
             cancelAnimationFrame(animationId);
@@ -154,9 +160,12 @@ function createOptimizedObserver(callback, options = {}) {
         rootMargin: '0px',
         threshold: 0.1
     };
-    
-    const observerOptions = { ...defaultOptions, ...options };
-    
+
+    const observerOptions = {
+        ...defaultOptions,
+        ...options
+    };
+
     return new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -169,7 +178,7 @@ function createOptimizedObserver(callback, options = {}) {
 // Optimized lazy loading
 function initOptimizedLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = createOptimizedObserver((entry) => {
         const img = entry.target;
         img.src = img.dataset.src;
@@ -177,34 +186,34 @@ function initOptimizedLazyLoading() {
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
 }
 
 // Optimized form handling
 function initOptimizedFormHandling() {
     const forms = document.querySelectorAll('form');
-    
+
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             taskScheduler.addTask(async () => {
                 const formData = new FormData(this);
                 const submitBtn = this.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
-                
+
                 // Show loading state
                 submitBtn.textContent = 'جاري الإرسال...';
                 submitBtn.disabled = true;
-                
+
                 try {
                     // Simulate API call
                     await new Promise(resolve => setTimeout(resolve, 1000));
-                    
+
                     // Show success message
                     showOptimizedNotification('تم إرسال الرسالة بنجاح!', 'success');
-                    
+
                     // Reset form
                     this.reset();
                 } catch (error) {
@@ -224,7 +233,7 @@ function showOptimizedNotification(message, type = 'info') {
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.textContent = message;
-        
+
         // Style the notification
         Object.assign(notification.style, {
             position: 'fixed',
@@ -239,14 +248,14 @@ function showOptimizedNotification(message, type = 'info') {
             transition: 'transform 0.3s ease',
             backgroundColor: getNotificationColor(type)
         });
-        
+
         document.body.appendChild(notification);
-        
+
         // Animate in
         requestAnimationFrame(() => {
             notification.style.transform = 'translateX(0)';
         });
-        
+
         // Remove after 5 seconds
         setTimeout(() => {
             notification.style.transform = 'translateX(100%)';
@@ -274,17 +283,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add optimized event listeners
     addOptimizedEventListener(window, 'scroll', optimizedScrollHandler);
     addOptimizedEventListener(window, 'resize', optimizedResizeHandler);
-    
+
     // Initialize optimized components
     initOptimizedLazyLoading();
     initOptimizedFormHandling();
-    
+
     // Initialize intersection observers for animations
     const fadeElements = document.querySelectorAll('.fade-in');
     const fadeObserver = createOptimizedObserver((entry) => {
         entry.target.classList.add('visible');
     });
-    
+
     fadeElements.forEach(el => fadeObserver.observe(el));
 });
 
@@ -298,8 +307,10 @@ function monitorPerformance() {
                 }
             });
         });
-        
-        observer.observe({ entryTypes: ['longtask'] });
+
+        observer.observe({
+            entryTypes: ['longtask']
+        });
     }
 }
 
