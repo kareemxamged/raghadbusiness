@@ -687,11 +687,23 @@
         }
 
         /* Prevent layout shift and forced reflow */
-        img {
-            max-width: 100%;
-            height: auto;
+        img { 
+            max-width: 100%; 
+            height: auto; 
             /* Prevent reflow */
             contain: layout;
+            /* Lazy loading optimization */
+            loading: lazy;
+        }
+        
+        /* Offscreen images optimization */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        img[loading="lazy"].loaded {
+            opacity: 1;
         }
 
         .elementor-image img {
