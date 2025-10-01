@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.raghadbusiness.com/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important files
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /img/

@@ -1,0 +1,26 @@
+:root {
+ 
+  --heading: 'Syne';
+  --body-font: 'Syne'; 
+  --number-font: 'Manrope'; 
+  --roboto-font: 'Roboto', sans-serif;
+  --play-font: 'Playfair Display', serif;
+  
+  --body-color: #33343A;  
+  --body-color2: #33343A;  
+  --base-color:  linear-gradient( 90deg, #5956f0 0%, #ff50b8 100%);
+  --base-color-backup:  #5956f0;
+ 
+  --base-color2:  #ff6600;
+  --base-color3:  var(--base-color);
+  --title-color:  #05151b;
+  --title-color2:  #191918;
+}
+.splitting .char {
+  transition: transform .3s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.0s linear;
+  transition-delay: calc( 30ms * var(--char-index) );
+}
+.splitting[data-scroll=out] .char {
+  opacity: 0;
+  transform: translateY(0.25em);
+}

@@ -1,0 +1,387 @@
+.bizx-header-btn .bizx-sign-up {
+    margin-left: 0;
+    margin-right: 35px;
+}
+.bizx-header-section .brand-logo {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.bizx-btn-about-grp .bizx-btn {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bizx-five-star-review-img li {
+    margin-left: 0;
+    margin-right: -20px;
+}
+.bizx-introduction-list li:before {
+    left: auto;
+    right: 0;
+}
+
+.bizx-introduction-list li {
+    padding-left: 0;
+    padding-right: 25px;
+}
+.bizx-circle-progress-item .graph-outer {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bizx-team-text-area {
+    margin-left: 0;
+    margin-right: 45%;
+}
+
+.bizx-team-slider-area {
+    overflow: hidden;
+}
+.bizx-pricing-price-text {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.js-marquee-wrapper {
+    float: left;
+}
+.bizx-faq-feed-accordion .accordion-button::after {
+    right: auto;
+    left: 25px;
+}
+.bizx-blog-item .bizx-blog-meta a {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.bizx-blog-item .bizx-blog-author .author-img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bizx-footer-cta-text:before {
+    right: auto;
+    left: -60px;
+}
+.bizex-footer-cta-content .bizx-five-star-review-img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.bizx_footer_widget .bizx_footer_social form input {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+.bizx_footer_widget .bizx_footer_social form button {
+    right: auto;
+    left: 0;
+}
+.bizx_footer_widget .bizx_footer_social .footer-download-btn a {
+    margin-right: 0;
+    margin-left: 15px;
+}
+.bizx_footer_widget .bizx-contact-item .inner-icon {
+    margin-right: 0;
+    margin-left: 12px;
+}
+.bz-about-section .bz-about-img {
+    right: auto;
+    left: 250px;
+}
+.bz-counter-item .counter-icon {
+    margin-right: 0;
+    margin-left: 24px;
+}
+.bz-about-circle-progress .graph-outer {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.bz-counter-item .counter-icon {
+    margin-right: 0;
+    margin-left: 24px;
+}
+
+.bz-growth-section .bz-growth-img {
+    right: auto;
+    left: 175px;
+}
+.bz-growth-progress .skill-progress-bar .skill-set-percent .progress span {
+    right: auto;
+    left: 0;
+}
+.bz-footer-widget .bz-recent-blog-item .blog-img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bizx-team-slider .slick-list.draggable {
+    float: left;
+}
+.bizx-sponsor-slider .slick-track {
+    float: left;
+}
+.bz-service-section-2 .bz-service-img {
+    right: auto;
+    left: 0;
+}
+.bz-team-slider .slick-list {
+    float: left;
+}
+.bz-sponsor-slider .slick-track {
+    float: left;
+}
+.bz-service-list-area-2 li {
+    padding-left: 0;
+    padding-right: 20px;
+}
+.bz-portfolio-item2 .bz-portfolio-img {
+    margin-right: 0;
+    margin-left: 50px;
+}
+.bz-testimonial-slider-2 .slick-track {
+    float: left;
+}
+.slick-list.draggable {direction: ltr;}
+
+[dir='rtl'] .slick-slide {
+    float: left;
+}
+[dir='rtl'] .slick-slide {
+    float: left;
+}
+.bz-team-slider-area {
+    overflow: hidden;
+}
+.bz-testimonial-section-2 .bz-testimonial-btn {
+    right: auto;
+    left: 10%;
+}
+
+.bz-testimonial-section-2 .bz-bottom-title {
+    left: auto;
+    right: 20px;
+}
+
+.bz-testimonial-section-2 .bz-testimonial-shape {
+    left: auto;
+    right: 0;
+}
+.bz-blog-item-2 .bz-blog-img {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.bz-blog-item-2 .bz-blog-img {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.bz-contact-btn-cta .bz-contact-location {
+    margin-right: 0;
+    margin-left: 60px;
+}
+
+.bz-contact-section .bz-contact-shape3 {
+    left: auto;
+    right: 65px;
+}
+
+.bz-contact-section .bz-contact-shape2 {
+    left: auto;
+    right: 25%;
+}
+
+.bz-contact-section .bz-contact-shape1 {
+    left: auto;
+    right: 0;
+}
+.bz-contact-img-cta .bz-cta-img {
+    margin-right: 0;
+    margin-left: 25px;
+}
+.bz-contact-btn-cta .bz-contact-location h3 i {
+    margin-left: 0;
+    margin-right: 15px;
+}
+.bz-footer-newslateer-2 button {
+    right: auto;
+    left: 0;
+}
+.bz-footer-menu-area .bz-footer-cta .bz-footer-cta-icon {
+    margin-right: 0;
+    margin-left: 15px;
+}
+.bzx-header-search-cta .bzx-header-cta-btn {
+    margin-left: 0px;
+    margin-right: 30px;
+}
+.bzx-about-img-wrap {
+    right: auto;
+    left: 80px;
+}
+
+.bzx-section-title .subtitle {
+    left: auto;
+    right: -60px;
+}
+
+.bzx-about-feature-list li:hover:before {
+    left: auto;
+    right: 10px;
+}
+
+.bzx-about-feature-list li:before {
+    left: auto;
+    right: 0;
+}
+
+.bzx-about-feature-list li {
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+.bzx-satisfection .skill-set-percent .progress span {
+    right: auto;
+    left: 0;
+}
+.bzx-cta-text .cta-icon {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.bzx-about-btn-cta .bzx-btn {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.bzx-service-img-text .bzx-service-img {
+    margin-right: 0;
+    margin-left: 55px;
+}
+
+.bzx-service-side-img {
+    margin-right: 0;
+    margin-left: 105px;
+}
+
+.bzx-funfact-item p {
+    margin-right: 0;
+    margin-left: 25px;
+}
+.bzx-project-section:before {
+    right: auto;
+    left: 0;
+}
+.bzx-why-choose-us-section:before {
+    left: auto;
+    right: 0;
+}
+
+.bzx-why-choose-us-section:after {
+    right: auto;
+    left: 0;
+}
+
+.bzx-section-top-content .title-bg {
+    left: auto;
+    right: 0;
+}
+.bzx-why-choose-us-img {
+    margin-right: 0;
+    margin-left: 70px;
+}
+
+.bzx-wc-steps-item .step-icon {
+    right: auto;
+    left: 0;
+}
+.bzx-faq-accordion .accordion-button::after {
+    right: auto;
+    left: 0;
+}
+
+.bzx-faq-accordion .accordion-body {
+    padding: 0 0px 25px;
+    padding-left: 100px;
+    padding-right: 20px;
+}
+.bzx-blog-slider-area {
+    margin-left: 0;
+    margin-right: 50px;
+    float: left;
+}
+
+.bzx-blog-content {
+    overflow: hidden;
+}
+.bzx-footer-cta-content .bzx-cta-img {
+    right: auto;
+    left: 150px;
+}
+.bis-footer-widget .bis-contact-item .inner-icon {
+    margin-right: 0;
+    margin-left: 12px;
+}
+.bz-header-section.header-type-one .bz-brand-logo {
+    margin-right: 0;
+    margin-left: 50px;
+}
+.bz-journey-slider .slick-list.draggable {
+    direction: inherit;
+}
+.bz-about-count-item {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.bz-about-count-item p {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.bz-about-feature-list li {
+    padding-left: 0;
+    padding-right: 45px;
+}
+
+.bz-about-feature-list li:before {
+    left: auto;
+    right: 0;
+}
+
+.bz-about-play-btn .bz-play-btn a i {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bz-about-play-btn .bz-btn-2 {
+    margin-right: 0;
+    margin-left: 43px;
+}
+.bz-blog-sidebar {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.bz-sidebar-widget .search-widget button {
+    right: auto;
+    left: 15px;
+}
+.bz-blog-sidebar {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.bz-sidebar-widget .bz-recent-blog-item .blog-img {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bz-blog-item .bz-blog-author img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.bz-blog-item .blog-meta a {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.bz-blog-item .blog-meta-text .read_more i {
+    margin-left: 0;
+    margin-right: 20px;
+}
+.bz-faq-feed-accordion .accordion-button::after {
+    right: auto;
+    left: 25px;
+}
